@@ -1,0 +1,6 @@
+2025-06-03 12:30:45,123 - INFO - User logged in
+2025-06-03 12:31:10,456 - ERROR - Failed to open file
+2025-06-03 12:32:00,789 - WARNING - Disk space low
+2025-06-03 12:33:15,000 - INFO - User requested data export
+2025-06-03 12:34:05,555 - ERROR - Database connection lost
+
