@@ -1,36 +1,37 @@
-Log File Analyzer
+# Log File Analyzer
 
 A Python CLI tool to analyze log files, filter logs by date range, and generate summary reports in CSV format.
 
-Features
+## What I Used
 
-- Parse structured log files
-- Filter logs between any two dates/times
-- Count log entries by severity level (INFO, WARNING, ERROR)
-- Export summary reports as CSV files
-- Color-coded terminal output for easier readability
+| Component | What It Was |
+|-----------|-------------|
+| Language | Python 3.6+ |
+| Library | colorama |
+| Input | Structured log files |
+| Output | CSV summary report |
+| Interface | Command-line (CLI) |
+| Feature | Date-range filtering |
+| Feature | Severity-level counting (INFO/WARN/ERROR) |
 
-Requirements
+## How I Set It Up
 
-- Python 3.6+
-- colorama (`pip3 install colorama`)
+1. Install the required dependency:
+   pip3 install colorama
 
-Usage
+2. Run the analyzer with a log file and a date range:
+   python3 log_analyzer.py <logfile> "<start_date>" "<end_date>" [--output <output_csv>]
 
-python3 log_analyzer.py <logfile> "<start_date>" "<end_date>" [--output <output_csv>]
+3. Example command:
+   python3 log_analyzer.py sample.log "2025-06-03 12:31:00" "2025-06-03 12:34:00" --output filtered_report.csv
 
-Example
+4. Sample output:
+   INFO: 1
+   WARNING: 1
+   ERROR: 1
+   Report saved to filtered_report.csv
 
-python3 log_analyzer.py sample.log "2025-06-03 12:31:00" "2025-06-03 12:34:00" --output filtered_report.csv
-
-Sample Output
-
-INFO: 1
-WARNING: 1
-ERROR: 1
-Report saved to filtered_report.csv
-
-How It Works
+## How It Works
 
 1. Reads and parses the log file
 2. Filters logs within the specified date range
@@ -38,6 +39,6 @@ How It Works
 4. Displays a color-coded summary in the terminal
 5. Saves the summary as a CSV report
 
-Author
+## Author
 
-Mohammad Akib Shaikh — Cybersecurity Analyst
+Mohammad Akib Shaikh — Aspiring Cybersecurity Analyst
