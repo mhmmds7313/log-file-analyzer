@@ -1,8 +1,12 @@
 # Log File Analyzer
 
-A Python CLI tool to analyze log files, filter logs by date range, and generate summary reports in CSV format.
+A Python CLI tool to analyze log files, filter logs by date range, and generate summary reports in CSV format. This repo covers parsing structured logs, filtering entries by a date range, and producing a CSV summary report.
 
-## What I Used
+---
+
+## Project 1: Log Parsing & Filtering
+
+### What I Used
 
 | Component | What It Was |
 |-----------|-------------|
@@ -11,33 +15,39 @@ A Python CLI tool to analyze log files, filter logs by date range, and generate 
 | Input | Structured log files |
 | Output | CSV summary report |
 | Interface | Command-line (CLI) |
-| Feature | Date-range filtering |
-| Feature | Severity-level counting (INFO/WARN/ERROR) |
+| Filter | Date-range filtering |
+| Counting | Severity-level (INFO/WARN/ERROR) |
 
-## How I Set It Up
+### How I Set It Up
 
-1. Install the required dependency:
+1. Install the required dependency.
+
    pip3 install colorama
 
-2. Run the analyzer with a log file and a date range:
+2. Run the analyzer with a log file and a date range.
+
    python3 log_analyzer.py <logfile> "<start_date>" "<end_date>" [--output <output_csv>]
 
-3. Example command:
+3. Example command.
+
    python3 log_analyzer.py sample.log "2025-06-03 12:31:00" "2025-06-03 12:34:00" --output filtered_report.csv
 
-4. Sample output:
+4. Sample output.
+
    INFO: 1
    WARNING: 1
    ERROR: 1
    Report saved to filtered_report.csv
 
-## How It Works
+### How It Works
 
 1. Reads and parses the log file
 2. Filters logs within the specified date range
 3. Counts log entries by their level
 4. Displays a color-coded summary in the terminal
 5. Saves the summary as a CSV report
+
+---
 
 ## Author
 
